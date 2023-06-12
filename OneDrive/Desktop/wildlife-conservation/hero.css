@@ -1,0 +1,515 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700&display=swap');
+
+
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.7;
+}
+
+ul li{
+    list-style: none;
+}
+
+a{
+    font-size: 1.6rem; /* 1.6rem=16px*/
+    text-decoration: none;
+}
+
+p,li{
+    font-size: 1.6rem;
+    margin-bottom: 0.5em; /*the margin bottom would be 0.5 of the font size that is equal to 0.8rem or 8px*/
+    letter-spacing: 0.10em;
+}
+
+h1,h3{
+    margin-bottom: 0.5em;
+    letter-spacing: 0.15em;
+    font-weight: 500;
+}
+
+/*##### UTILITY CLASS######*/
+.container{            /*if we will decrease the size of the screen the content would set accordingly*/
+    max-width: 1200px;
+    width: 90%;
+    margin:0 auto;
+}
+.lg-heading{
+    font-size: 3.5rem;
+}
+.md-heading{
+    font-size: 2.2rem;
+}
+
+.text-red{
+    color:#e63946;
+     
+}
+.text-light{
+    color: #f4f4f4;
+}
+
+.text-black{
+    color:#333;
+}
+.text-gray{
+    color:#555;
+
+}
+.a:hover{
+    background-color: rgb(216, 210, 210);
+    
+} 
+/* .btn{
+    display: inline-block;
+    padding:0.5em 1.5em;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin: 0.5em 0;
+} */
+
+.btn-primary{
+    background-color: #f4f4f4;
+    border-radius: 10em;
+}
+
+.bg-color{
+    background-color: #263238;
+}
+/*#############################################*/
+
+/*WORK ON DIV=CONTAINER*/
+.header{
+    position: relative;
+    height:100vh;
+    background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)),url('wildilife-banner.jpg'); /*for darkening our background we used linear gradient*/
+    background-position: center;
+    background-size:cover ;
+    background-repeat: no-repeat;
+}
+
+.navbar{
+    /* background-color: black; */
+    padding:1rem;
+}
+
+
+.navbar .logo{
+    float:left;
+    font-size: 3.5rem; /*3.5rem=35px*/
+}
+
+.navbar .nav-items{
+    float:right;
+    margin-top: 1rem;
+}
+
+.navbar .nav-item{
+    display: inline-block;
+    padding:1rem;
+}
+
+.navbar a,
+.navbar a:visited{
+    color:#f4f4f4;
+}
+
+
+.navbar a:hover{
+    text-decoration: underline;
+}
+
+.navbar::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+/*WORK ON DIV="HEADER-CONTENT*/
+.header-content{
+    position:absolute;
+    text-align: center;
+   
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    background: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2));
+}
+.header-content h1{
+    text-transform:uppercase ; /*for transforming the element into uppercase*/
+    font-weight: 700;
+}
+/*#########################################*/
+.contact{
+    background-color: #3b3b3b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.containerone {
+    background-color: rgba(0, 0, 0, 1);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    width: 50%;
+}
+
+h2 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #2980b9;
+}
+
+/* ... your existing CSS code ... */
+
+/* ... your existing CSS code ... */
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* @keyframes bounceIn {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+} */
+
+@keyframes rotateIn {
+    from {
+        transform: rotateZ(-180deg);
+        opacity: 0;
+    }
+    to {
+        transform: rotateZ(0);
+        opacity: 1;
+    }
+}
+
+.header {
+    /* ... your existing header styles ... */
+    animation: fadeIn 1s ease-in-out;
+}
+
+.containerone {
+    /* ... your existing contact form styles ... */
+    animation: slideIn 1s ease-in-out;
+}
+
+/* Additional Animations */
+.header-content {
+    animation: bounceIn 1s ease-in-out;
+}
+
+.form-group {
+    animation: rotateIn 1s ease-in-out;
+}
+
+
+
+
+
+/* ################################################### */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+:root{
+    /* --left-bg-color:rgba(208, 208, 224, 0.7);
+    --right-bg-color:rgba(43,43,43,0.8);
+    --left-btn-hover-color:rgba(87,84,236,1);
+    --right-btn-hover-color:rgba(28,122,28,1); */
+    --hover-width:60%;
+    --other-width:40%;
+    --speed:1000ms;
+}
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto',sans-serif;
+    height: 100vh;
+    overflow:scroll;
+    margin: 0;
+}
+.headone{
+    padding-bottom: 2%;
+}
+.list{
+    display: block;
+    border: 1px solid white;
+    margin-top: 30%;
+    margin-left: 27%;
+    position: fixed;
+    z-index: 99;
+}
+.heading{
+    font-size: 4rem;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    top:20%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+.para{
+    color: #fff;
+    position: absolute;
+    left: 25%;
+    top:20%;
+    /* transform: translateX(-50%); */
+    /* white-space: nowrap; */
+}
+.btn{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left:50%;
+    top:40%;
+    transform: translateX(-50%);
+    text-decoration: none;
+    color: #fff;
+    border: #fff solid 0.2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 15rem;
+    padding: 1.5rem;
+    
+}
+.btn:hover{
+    background-color: black;
+    border: none;
+}
+/* .split.left .btn:hover{
+    background-color: var(--left-btn-hover-color);
+    border-color: var(--left-btn-hover-color);
+}
+.split.right .btn:hover{
+    background-color: var(--right-btn-hover-color);
+    border-color: var(--right-btn-hover-color);
+} */
+.conatainer{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #333;
+}
+.split{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+.split.left{
+    left:0;
+    background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)),url('https://images.squarespace-cdn.com/content/v1/58a44dacc534a53a728e6470/1634295843242-LUGVGJ8O5SN31HSAGCO8/kenya-safar-and-beach-holiday-ol-pejeta-northern-white-rhino.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.split.left::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--left-bg-color);
+}
+
+.split.right,
+.split.left,
+.split.right::before,
+.split.left::before{
+    transition: all var(--speed) ease-in-out;
+}
+.split.right{
+    right:0;
+    background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)),url('https://discovery-assets-production.s3.eu-west-1.amazonaws.com/app/uploads/2022/02/11102757/GettyImages-129436651.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.split.right::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--right-bg-color);
+}
+.hover-left .left{
+    width:var(--hover-width);
+}
+.hover-left .right{
+    width:var(--other-width);
+}
+.hover-right .right{
+    width:var(--hover-width);
+}
+.hover-right .left{
+    width:var(--other-width);
+}
+@media(max-width:800px){
+    h1{
+        font-size: 2rem;
+        top:30%;
+    }
+    .btn{
+        padding: 1.2rem;
+        width:12rem;
+    }
+}
+
+
+/* ############################################## */
+
+#gallery{
+    background-color: #02111b;
+    font-family:'Muli',sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+.head{
+    background-color:#02111b;
+    color:white;
+    /* text-transform: capitalize; */
+    font-family: 'Roboto',sans-serif;
+    margin-bottom: 0;
+    text-align: center;
+    padding-top: 3%;
+    /* padding-bottom: 0; */
+    font-size: 3rem;
+}
+/* we flex our containers(images) and put the width of 90vw */
+.containerthree{
+    display: flex;
+    width: 90vw;
+}
+.panel{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 50px;
+    color: #fff;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 10px;
+    position: relative;
+    transition: flex 0.7s;
+}
+.panel h3{
+    font-size: 24px;
+    position: absolute;
+    bottom: 20px;
+    left:20px;
+    margin: 0;
+    opacity: 0;
+}
+/* when the class is active then the size of the image would increase */
+.panel.active{
+    flex: 5;
+
+}
+.panel.active h3{
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+}
+
+@media(max-width:480px){
+    .containerthree{
+        width: 100vw;
+    }
+    .panel:nth-of-type(4),
+    .panel:nth-of-type(5){
+        display: none;
+    }
+    
+}
+
+
+/* ########################################### */
+
+.footer{
+    
+    
+    padding:2rem;
+    text-align: center;
+    background-color:#02111b;
+}
+
+.social-media-links i{
+    margin:2rem;
+}

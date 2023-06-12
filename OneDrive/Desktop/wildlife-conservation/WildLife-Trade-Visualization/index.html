@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+ 
+  <script src="http://d3js.org/d3.v4.min.js"></script>
+  <script src="https://d3js.org/d3.v4.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.19/topojson.min.js"></script>
+  <script src="https://d3js.org/d3-geo-projection.v1.min.js"></script>
+  <script src="https://d3js.org/d3-collection.v1.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+<body>
+  <nav class="navbar" style="background-color: black; margin-bottom: 0; padding-bottom: 0;">
+    <!--##########DIV CONTAINER#########-->
+    <div class="container">
+        <h1 class="logo" style="color: white; font-size: 2rem; margin-left: 4%;">WC</h1>
+        <ul class="nav-items">
+            <li class="nav-item text-light" style="font-size: 1rem; text-decoration: none;"><a href="../hero.html">HOME</a></li>
+            <li class="nav-item" style="font-size: 1rem;"><a href="#statistics">STATISTICS</a></li>
+            <!-- <li class="nav-item" style="font-size: 1rem;"><a href="">CONTRIBUTE</a></li> -->
+            <li class="nav-item" style="font-size: 1rem;"><a href="../contact.html">CONTACT</a></li>
+            <!-- <li class="nav-item" style="font-size: 1rem;"><a href="">ABOUT US</a></li> -->
+        </ul>
+    </div>
+    <!-- https://formsubmit.co/el/kesaku -->
+</nav>
+  <section class="index" style="background-color: #222; margin-top: -5%;">
+  <!-- <header class="headerpart">
+    <div class="header-text">
+      <h1>Wildlife Trade</h1>
+      <h2>CSE557A Final Project</h2>
+    </div>
+  </header>
+  <section class="body-text">
+    <p>Recently, the world's last male northern white rhino has died leaving only two females left to save the subspecies from extinction. It is again alarming us what a severe situation wildlife animals or plants is facing. Worldwide, one in every three species of amphibian is endangered, 39 species have gone extinct in the last 500 years and another 130 species are suspected to have gone extinct in recent decades.</p>
+  </section> -->
+  <!--Map Section-->
+  <section class="maps">
+    <div class="body-text-map">
+      <h1 style="color: white; padding-top: 3%;">Worldwide Distribution Of Wildlife Trade</h1>
+    </div>
+    <div class="map" style="margin-left: 15%;">
+    </div>
+  </section>
+ <!--Bubble Chart Section-->
+  <section class="body-text" id="first-paragraph">
+      <div class="column" >
+        <p >Total Weight of Wild Life Traded<br><br></p>
+        <h1>20+ million kg</h1>
+      </div>
+      <div class="column">
+        <p>Number of Taxon of Wild Life Traded<br><br></p>
+        <h1>3000+</h1>
+      </div>
+      <div class="column" >
+        <p>Number of Genus of Wild Life Traded<br><br></p>
+        <h1>800+</h1>
+    </div>
+  </section>
+  <!--Bubble Chart-->
+  <section class="bubbleChart" id="statistics">
+    <div class="body-text-map">
+      <h1 style="color: white;">Distribution of Amount of Exported Wildlife Across Continents</h1> 
+    </div>
+
+    <div id="controls">
+      <span>
+        <label style="color: white;"><input id="combine" type="radio" name="grouping" value="combine" checked > Combine</label>
+        <label style="color: white;"><input id="continents" type="radio" name="grouping" value="continents"> Continents</label>
+        <label style="color: white;"><input id="country-centers" type="radio" name="grouping" value="country-centers"> Country Centers</label>
+        <label><input id="population" type="hidden" name="grouping" value="population"> </label>
+      </span>
+       <span>
+    <label><input id="colors" type="hidden" name="fill" value="colors" checked></label>
+    <label><input id="flags" type="hidden" name="fill" value="flags"></label>
+  </span>
+
+  </div>
+  <div id="country-info"></div>
+  <div id="bubble-chart"></div>
+  <script>
+    d3.queue()
+      .defer(d3.csv, "countries.csv")
+      .defer(d3.json, "continent-names.json")
+      .await(createBubbleChart);
+  </script>
+  </section>
+    <section class="body-text">
+    <p>All the small circles represent for countries with no report of wildlife trade, which means either they are not officially listed for international wildlife regulation, or the data is missing. From the current data, we can see that most wildlife are exported from Asia, South Africa, and Africa. This fact raises our concern for the current status of wildlife in these continents. However, since the current data is not very complete, it’s very hard to use it to study its relationship with the potential impact on biodiversity or the economy of these continents.
+
+</p>
+  </section>
+  <!--Bar Chart-->
+  <!-- <section class="barChart">
+    <h1 align="center">Top ten countries of export and import (kg)</h1>
+    <div id="container">
+      <div id="export"></div>
+      <div id="import"></div>
+    </div>
+  </section> -->
+  <!--Pie Chart-->
+  <!-- <section class="body-text">
+    <p>Japan, China, and the United States are the biggest importers of wildlife. The amount of total quantity of wildlife trade from these three countries is tremendously greater than the other countries, which is about more than 50% of the overall international wildlife traded.</p>
+  </section>
+  <div class="body-text-map">
+      <h1>Proportion of Different Class of Wildlife Traded</h1> 
+    </div>
+  <section class="pieChart"> 
+    <div id="pie_tooltip"></div> 
+  </section> -->
+
+  <!-- Stacked Bar Chart -->
+  <!-- <div class="body-text-map">
+      <h1>Purposes of Different Class of Wildlife Traded</h1> 
+  </div>
+  <div class="mine">
+  <section class="stackedChart">
+   <svg id="normal" width="960" height="600"></svg>
+    <p>
+    Other purposes: Breeding, Educational, Hunting trophy, Law enforcement<br>
+    Other classes: Aves, Hirudinoidea, Amphibia, Hydrozoa, Bivalvia, Aves, Holothuroidea, etc.
+    </p>
+  </div> -->
+  <!-- <svg id="log" width="960" height="600"></svg> -->
+  </section>
+</section>
+  <script src="script.js"></script>
+
+  </body>
+  </html>

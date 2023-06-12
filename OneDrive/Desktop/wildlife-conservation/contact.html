@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="hero.css">
+</head>
+<body>
+    <nav class="navbar" style="background-color: black;">
+        <!--##########DIV CONTAINER#########-->
+        <div class="container">
+            <h1 class="logo text-light">WC</h1>
+            <ul class="nav-items">
+                <li class="nav-item text-light"><a href="./hero.html">HOME</a></li>
+                <!-- <li class="nav-item"><a href="./WildLife-Trade-Visualization/index.html">STATISTICS</a></li> -->
+                <!-- <li class="nav-item"><a href="">CONTRIBUTE</a></li> -->
+                <li class="nav-item"><a href="contact.html">CONTACT</a></li>
+                <!-- <li class="nav-item"><a href="">ABOUT US</a></li> -->
+            </ul>
+        </div>
+        <!-- https://formsubmit.co/el/kesaku -->
+    </nav>
+    <section class="contact">
+    <div class="containerone">
+        <h2>Contact Form</h2>
+        <form action="https://formspree.io/f/mvonjbkb" method="POST">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="topic">Topic:</label>
+                <select id="topic" name="topic" required>
+                    <option value="wildlife_poaching">Wildlife Poaching</option>
+                    <option value="illegal_trade">Illegal Trade</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="topic">Message section:</label>
+                <textarea name="" id="" cols="30" rows="5" style="background-color: rgba(255, 255, 255, 0.1); color: white; width: 100%; border:none" placeholder="Enter your message"></textarea>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+</section>
+</body>
+</html>
